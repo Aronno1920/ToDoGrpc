@@ -1,8 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using ToDoGrpc.Data;
 using ToDoGrpc.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Services.AddDbContext<AppDbContext>(Options => Options.UseSqlite("Data Source=ToDoDatbase.db"));
+
+
+
 builder.Services.AddGrpc();
 
 var app = builder.Build();
