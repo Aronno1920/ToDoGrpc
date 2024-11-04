@@ -9,7 +9,7 @@ builder.Services.AddDbContext<AppDbContext>(Options => Options.UseSqlite("Data S
 
 
 
-builder.Services.AddGrpc();
+builder.Services.AddGrpc().AddJsonTranscoding();
 
 var app = builder.Build();
 

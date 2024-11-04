@@ -9,9 +9,6 @@
   <ItemGroup>
     <Protobuf Include="Protos\greet.proto" GrpcServices="Server" />
     <Protobuf Include="Protos\todo.proto" GrpcServices="Server" />
-
-    <Protobuf Include="google\api\http.proto" GrpcServices="Server" />
-    <Protobuf Include="google\api\annotations.proto" GrpcServices="Server" />
   </ItemGroup>
 
   <ItemGroup>
